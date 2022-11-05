@@ -1,53 +1,17 @@
-<html>
-
-<head>
-    <link rel="stylesheet" type="text/css" href="myStyle.css">
-    <!-- <script src="myJavaScript.js"></script> -->
-</head>
-
-<body>
-    <div class="nav">
-        <ul class="top" id="navigator">
-            <li class="logo"><img src="./images/logo.png"></li>
-            <li>
-                <input type="submit" value="登录"></li>
-            <li><a href="https://little-wisdom2022.github.io/zhiboke/index.html ">智博客</a></li>
-            <li><a href="# ">https://little-wisdom2022.github.io/zhibbs/</a></li>
-            <li><a href="https://little-wisdom2022.github.io/zhizhihome/ ">智智的个人主页</a></li>
-            <li><a href="# ">关于我们</a></li>
-        </ul>
-    </div>
-
-    <script>
-        var list = document.getElementById("navigator");
-        console.log("list中包含" + list.childElementCount + "个元素");
-        var nodes = list.childNodes;
-        for (let i = 0; i < nodes.length; i++) {
-            if (i === 0 || i === 1) {
-                // 为什么login没有跳过去？
-            } else {
-                let liNode = nodes[i];
-                bindClick(liNode);
-            }
-        }
-
-        /*注册绑定事件*/
-        function bindClick(node) {
-            node.onclick = function() {
-                // 还原非选中项
-                for (let i = 0; i < nodes.length; i++) {
-                    if (i === 0 || i === 1) {
-                        // 如果是logo和login，则不需要清空属性
-                    } else {
-                        console.log("test");
-                        let clearNode = nodes[i];
-                        clearNode.className = ' ';
-                    }
-                }
-                node.className = 'selected';
-            }
-        }
-    </script>
-</body>
-
-</html>
+	<a class="card-a" href="https://little-wisdom2022.github.io/" target="_target">
+		<div class="card">
+						<span class="items-badge badge-success">开放/Lastest</span>
+						<div class="items-title"> <span id="jinrishici-sentence">我的个人主页</span></div>
+						<div class="items-subtitle">想要了解我？来我的个人主页！</div>
+		</div>
+	</a>
+</div> 
+	<a class="card-a" href="https://little-wisdom2022.github.io/" target="_target">
+		<div class="card">
+						<span class="items-badge badge-success">开放/Lastest</span>
+						<img class="items-img" src="../img/video.png">
+						<div class="items-title"> <span id="jinrishici-sentence">智视界</span></div>
+						<div class="items-subtitle">趣无界，智视界！2727</div>
+		</div>
+	</a>
+</div> 
